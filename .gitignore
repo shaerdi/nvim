@@ -1,0 +1,7 @@
+eclim/
+plugged/
+plugin/
+
+*~
+*.swp
+*.swo
