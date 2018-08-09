@@ -14,9 +14,7 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'bfredl/nvim-ipy' 
-"Plug 'hkupty/iron.nvim'
 Plug 'kshenoy/vim-signature'
-Plug 'airblade/vim-gitgutter'
 call plug#end()
 " 
 " Vim Options:
