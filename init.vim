@@ -130,7 +130,7 @@ call plug#end()
         let g:SuperTabDefaultCompletionType = "context"
         let g:SuperTapContextDefaultCompletionType = "<c-x><c-u>"
         let g:SuperTabClosePreviewOnPopupClose = 1
-        let g:UltiSnipsExpandTrigger="<C-j>"
+        let g:UltiSnipsExpandTrigger="<C-k>"
 "	}
 "
 "   DoxygenToolkit {
