@@ -15,12 +15,14 @@ call plug#begin()
     Plug 'zchee/deoplete-jedi'
     Plug 'bfredl/nvim-ipy' 
     Plug 'kshenoy/vim-signature'
+    Plug 'airblade/vim-gitgutter'
 call plug#end()
 " 
 " Vim Options:
 "
 " 
 " Basics {
+    au FocusGained,BufEnter * : silent! !
     set autoread            " If file in buffer is changed, vim reloads the buffer
 " }
 "
@@ -32,6 +34,7 @@ call plug#end()
     set noea
     set title
     set inccommand=split
+    vnoremap <LeftRelease> "*ygv
 " }
 "
 " UI {
