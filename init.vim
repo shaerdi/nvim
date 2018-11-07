@@ -183,7 +183,7 @@ call plug#end()
 "
 " Spell check {
     if has("autocmd")
-        autocmd FileType tex set spell spelllang=de
+        autocmd FileType tex set spell spelllang=de,en_us
     endif 
 " }
 "
