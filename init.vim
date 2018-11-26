@@ -16,6 +16,7 @@ call plug#begin()
     Plug 'bfredl/nvim-ipy' 
     Plug 'kshenoy/vim-signature'
     Plug 'airblade/vim-gitgutter'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 call plug#end()
 " 
 " Vim Options:
@@ -133,7 +134,7 @@ call plug#end()
         let g:SuperTabDefaultCompletionType = "context"
         let g:SuperTapContextDefaultCompletionType = "<c-x><c-u>"
         let g:SuperTabClosePreviewOnPopupClose = 1
-        let g:UltiSnipsExpandTrigger="<C-k>"
+        let g:UltiSnipsExpandTrigger="<C-h>"
 "	}
 "
 "   DoxygenToolkit {
@@ -142,6 +143,7 @@ call plug#end()
 "
 "   Eclim {
         let g:EclimCompletionMethod = 'omnifunc'
+        let g:EclimFileTypeValidate = 0
         nnoremap <leader><leader>s :CSearchContext<cr>
 "   }
 "
@@ -149,6 +151,7 @@ call plug#end()
         nnoremap <leader>ipy :IPython<cr>
         nnoremap <leader>ipe :IPython --existing<cr><c-w>K:resize 60<cr>
         let g:ipy_celldef = '##%'
+        let g:nvim_ipy_perform_mappings = 0
         au BufNewFile,BufRead *.py set omnifunc=IPyOmniFunc
         map <silent> <leader>rr <Plug>(IPy-Run)
         map <silent> <leader>rc <Plug>(IPy-RunCell)
@@ -170,6 +173,11 @@ call plug#end()
         let g:vimtex_view_method='zathura'
         au BufNewFile,BufRead *.tex let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
         let g:vimtex_compiler_progname = 'nvr'
+"   }
+"
+"   markdown {
+        let g:mkdp_auto_start = 0
+        let g:mkdp_auto_close = 0
 "   }
 " }
 "
