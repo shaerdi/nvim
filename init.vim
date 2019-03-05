@@ -17,6 +17,7 @@ call plug#begin()
     Plug 'kshenoy/vim-signature'
     Plug 'airblade/vim-gitgutter'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 " 
 " Vim Options:
@@ -120,6 +121,8 @@ call plug#end()
 " 	Solarized {
         set termguicolors
         colorscheme NeoSolarized
+        set t_Co=256
+        let g:solarized_termcolors=256
 " 	}
 "
 " 	Nerdtree {
