@@ -13,11 +13,12 @@ call plug#begin()
     Plug 'vim-scripts/DoxygenToolkit.vim'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-jedi'
-    Plug 'bfredl/nvim-ipy' 
     Plug 'kshenoy/vim-signature'
     Plug 'airblade/vim-gitgutter'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'w0rp/ale'
+    Plug 'davidhalter/jedi-vim'
 call plug#end()
 " 
 " Vim Options:
@@ -150,15 +151,8 @@ call plug#end()
         nnoremap <leader><leader>s :CSearchContext<cr>
 "   }
 "
-"   nvim-ipy {
-        nnoremap <leader>ipy :IPython<cr>
-        nnoremap <leader>ipe :IPython --existing<cr><c-w>K:resize 60<cr>
-        let g:ipy_celldef = '##%'
-        let g:nvim_ipy_perform_mappings = 0
-        au BufNewFile,BufRead *.py set omnifunc=IPyOmniFunc
-        map <silent> <leader>rr <Plug>(IPy-Run)
-        map <silent> <leader>rc <Plug>(IPy-RunCell)
-"
+"   jedi-vim {
+        let g:jedi#popup_on_dot = 0
 "   }
 "
 "   deoplete {
