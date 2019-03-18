@@ -19,6 +19,7 @@ call plug#begin()
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'w0rp/ale'
     Plug 'davidhalter/jedi-vim'
+    Plug 'christoomey/vim-tmux-runner'
 call plug#end()
 " 
 " Vim Options:
@@ -175,6 +176,18 @@ call plug#end()
 "   markdown {
         let g:mkdp_auto_start = 0
         let g:mkdp_auto_close = 0
+"   }
+"
+"   vim-tmux-runner{
+        let g:VtrStripLeadingWhitespace = 0
+        let g:VtrClearEmptyLines = 0
+        let g:VtrAppendNewline = 1
+        let g:VtrOrientation = "h"
+        let g:VtrPercentage = 40
+        let g:VtrInitialCommand = "ipython3"
+        nnoremap <leader>sl :VtrSendLinesToRunner<cr>
+        nnoremap <leader>fr :VtrFocusRunner<cr>
+        vnoremap <leader>sl :VtrSendLinesToRunner<cr>
 "   }
 " }
 "
