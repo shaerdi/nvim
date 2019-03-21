@@ -146,12 +146,6 @@ call plug#end()
 	    let g:DoxygenToolkit_authorName="shaerdi"
 "   }
 "
-"   Eclim {
-        let g:EclimCompletionMethod = 'omnifunc'
-        let g:EclimFileTypeValidate = 0
-        nnoremap <leader><leader>s :CSearchContext<cr>
-"   }
-"
 "   jedi-vim {
         let g:jedi#popup_on_dot = 0
 "   }
@@ -178,16 +172,22 @@ call plug#end()
         let g:mkdp_auto_close = 0
 "   }
 "
-"   vim-tmux-runner{
-        let g:VtrStripLeadingWhitespace = 0
-        let g:VtrClearEmptyLines = 0
+"   vim-tmux-runner {
+        let g:VtrStripLeadingWhitespace = 1
+        let g:VtrClearEmptyLines = 1
         let g:VtrAppendNewline = 1
         let g:VtrOrientation = "h"
         let g:VtrPercentage = 40
         let g:VtrInitialCommand = "ipython3"
+        let g:vtr_filetype_runner_overrides = { 'python': 'run -i {file}'}
         nnoremap <leader>sl :VtrSendLinesToRunner<cr>
         nnoremap <leader>fr :VtrFocusRunner<cr>
         vnoremap <leader>sl :VtrSendLinesToRunner<cr>
+        nnoremap <leader>sf :VtrSendFile<cr>
+"   }
+"
+"   ale {
+        let g:ale_linters = { 'tex' : [], }
 "   }
 " }
 "
