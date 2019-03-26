@@ -125,6 +125,7 @@ call plug#end()
         colorscheme NeoSolarized
         set t_Co=256
         let g:solarized_termcolors=256
+        set background=light
 " 	}
 "
 " 	Nerdtree {
