@@ -174,17 +174,18 @@ call plug#end()
 "   }
 "
 "   vim-tmux-runner {
-        let g:VtrStripLeadingWhitespace = 1
-        let g:VtrClearEmptyLines = 1
+        let g:VtrStripLeadingWhitespace = 0
+        let g:VtrClearEmptyLines = 0
         let g:VtrAppendNewline = 1
         let g:VtrOrientation = "h"
         let g:VtrPercentage = 40
-        let g:VtrInitialCommand = "ipython3"
+        let g:VtrInitialCommand = '''ipython3 --no-autoindent'''
         let g:vtr_filetype_runner_overrides = { 'python': 'run -i {file}'}
         nnoremap <leader>sl :VtrSendLinesToRunner<cr>
         nnoremap <leader>fr :VtrFocusRunner<cr>
         vnoremap <leader>sl :VtrSendLinesToRunner<cr>
         nnoremap <leader>sf :VtrSendFile<cr>
+        nnoremap <leader>or :VtrOpenRunner {'cmd':'''ipython3 --no-autoindent'''}<cr>
 "   }
 "
 "   ale {
